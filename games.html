@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<title>Games - PlayPal</title>
+<h1 class="logo">PlayPal</h1>
+<ul class="navbar glow sticky push">
+	<li>
+		<a href="index.html">Home</a>
+	</li>
+	<li>
+		<a id="active">Games</a>
+	</li>
+</ul>
+<h1>new on playPal</h1>
+<div class="cards">
+	<img src="https://play-lh.googleusercontent.com/oObkhKfUXOY5yzheKe9w1Y1pXZBgdiSksMeNmT0BijoQ8J75maTCIW2TA7-6pA6EMA=s360-rw" class="slither.io">
+	<img src="https://play-lh.googleusercontent.com/JchaxYkVuO_jGLOaS2-Ur2HcAFAOOPPYsRm6sraO7E55OqoVK_WlZ5k32iIvF_HyeD8=s360-rw" class="astray">
+</div>
+<h1>find your way</h1>
+<div class="cards">
+	<img src="https://play-lh.googleusercontent.com/JchaxYkVuO_jGLOaS2-Ur2HcAFAOOPPYsRm6sraO7E55OqoVK_WlZ5k32iIvF_HyeD8=s360-rw" class="astray">
+</div>
+<h1 style="position: fixed; bottom: 0; right: 1vh; color: #fff; text-transform: uppercase; font-size: 3.5vh;" id="gamename"></h1>
+<div style="visibility: hidden; position: fixed; top: 0; left: 0; background: var(--main-color); height: 100vh; width: 100vw;"><h1 style="height: 2.5vh;">PlayPal</h1>
+	
+<iframe style="position: fixed; bottom: 0; left: 0; height: 90.5vh; width: 100vw; border: none;" src="" id="gamearea"></iframe></div>
+<style>
+@import url(style.css);
+	
+	.cards img {
+		height: 10vh;
+		width: 10vh;
+		object-fit: cover;
+		background: #333;
+		border-radius: 33%;
+		cursor: pointer;
+		padding: 1vh;
+	}
+</style>
+
+<script>
+function load(gameid, link) {
+	for(var i = 0; i < document.getElementsByClassName(gameid).length; i++) {
+	
+		document.getElementsByClassName(gameid)[i].onmouseover = function() {
+		document.getElementById('gamename').innerHTML = gameid
+	}
+		document.getElementsByClassName(gameid)[i].onmouseout = function() {
+		document.getElementById('gamename').innerHTML = ''
+	}
+		document.getElementsByClassName(gameid)[i].addEventListener('click',  function() {document.getElementById('gamearea').src = link; document.getElementById('gamearea').parentElement.style.visibility = 'visible'})
+}
+}
+	
+	load('slither.io', 'https://slither.io')
+	load('astray', 'http://localhost:50459/games/astray/index.html')
+</script>

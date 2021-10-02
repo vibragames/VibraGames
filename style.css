@@ -1,0 +1,31 @@
+@import url(https://shaurya1709.github.io/Eleganto/api.css);
+@import url(https://fonts.googleapis.com/css2?family=Texturina&family=Sora);
+:root {
+	--main-color: #121212;
+	--text-color: #D0D3D4;
+	--accent-color: #FA7268;
+	--font: Texturina;
+	--page-margin: 0px 50px;
+	--text-color-alternate: #fff;
+	--text-case-filter: capitalize;
+	}
+	
+.logo {
+	font-size: 12vh;
+	user-select: none;
+	cursor: default;
+	display: inline-block;
+	font-family: Sora;
+}
+
+@media(hover:none) {	
+	
+	body {background: #121212}	
+	
+.logo {
+  display: inline-block;
+  position: relative;
+  left: 50%; 
+  transform: translateX(-50%);
+}
+	}
